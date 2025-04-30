@@ -19,19 +19,19 @@ public class VistaListado extends VistaGeneral {
 	 */
 	private static final String FORMATO_LISTADO = "  %d: %s%n";
 	/**
-	 * Número de entradas, importaciones y exportaciones y borrados
+	 * Número de entradas
 	 */
 	private int numEntradas;
 	/**
-	 * Número de entradas, importaciones y exportaciones y borrados
+	 * Número de  importaciones
 	 */
 	private int numImportaciones;
 	/**
-	 * Número de entradas, importaciones y exportaciones y borrados
+	 * Número de exportaciones
 	 */
 	private int numExportaciones;
 	/**
-	 * Número de entradas, importaciones y exportaciones y borrados
+	 * Número de borrados
 	 */
 	private int numBorrados;
 
