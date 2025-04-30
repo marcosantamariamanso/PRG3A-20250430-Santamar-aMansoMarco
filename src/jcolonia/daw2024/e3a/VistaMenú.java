@@ -44,9 +44,11 @@ public class VistaMenú extends VistaGeneral {
 	        System.out.println("    Menú Principal   ");
 	        System.out.println("=====================");
 	        System.out.println("0. Salir");
-	        System.out.println("1. Alta de ordenador");
-	        System.out.println("2. Listar ordenadores");
-	        System.out.println("3. Guardar y salir");
+	        System.out.println("1. Alta");
+	        System.out.println("2. Baja");
+	        System.out.println("3. Listado");
+	        System.out.println("4. Exportación");
+	        System.out.println("5. Importación");
 	        System.out.println("=====================");
 	    }
 
@@ -59,11 +61,11 @@ public class VistaMenú extends VistaGeneral {
 	 */
 	public int pedirOpción() {
 		int opcion = -1;
-        while (opcion < 0 || opcion > 3) {
+        while (opcion < 0 || opcion > 5) {
             System.out.print("Seleccione una opción: ");
             try {
 				opcion = Integer.parseInt(scanner.nextLine());  // Leemos la opción como un número
-                if (opcion < 0 || opcion > 3) {
+                if (opcion < 0 || opcion > 5) {
                     System.out.println("Opción no válida. Por favor, intente nuevamente.");
                 }
             } catch (NumberFormatException e) {
