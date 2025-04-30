@@ -16,9 +16,6 @@ public class VistaMenú extends VistaGeneral {
      * Scanner para la lectura de la entrada del usuario.
      */
     private Scanner scanner;
-	/** Formato común tipo «printf» de las opciones de menú. */
-	private static final String FORMATO_OPCIONES_MENÚ = "  %d) %s%n";
-
 	/** Textos de las opciones del menú. */
 	private String[] textoOpciones;
 
@@ -49,30 +46,36 @@ public class VistaMenú extends VistaGeneral {
 	        System.out.println("3. Listado");
 	        System.out.println("4. Exportación");
 	        System.out.println("5. Importación");
+	        System.out.println("6.Personalizar");
+	        System.out.println("7. Borrar todos los inventarios");
 	        System.out.println("=====================");
 	    }
 
-
 	/**
-	 * Solicita al usuario elegir una opción de menú. En caso de no elegir una
-	 * opción válida insiste de manera indefinida hasta obtener una.
+	 * Solicita al usuario que introduzca un número entero. 
+	 * @return el entero introducido por el usuario
 	 * 
-	 * @return el número de la opción elegida [1..n]
 	 */
-	public int pedirOpción() {
-		int opcion = -1;
-        while (opcion < 0 || opcion > 5) {
-            System.out.print("Seleccione una opción: ");
-            try {
-				opcion = Integer.parseInt(scanner.nextLine());  // Leemos la opción como un número
-                if (opcion < 0 || opcion > 5) {
-                    System.out.println("Opción no válida. Por favor, intente nuevamente.");
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Error: Debe ingresar un número válido.");
-            }
-        }
-        return opcion;
-    }
+	public int pedirOpcion() {
+		return i;
 		
 	}
+		/**
+		 * es la opción seleccionada por el usuario
+		 */
+		int opción = -1;
+		/**
+		 * es el número de opciones disponibles
+		 */
+		int i = 0;{
+
+		while (opción < 0 || opción > textoOpciones.length) {
+			System.out.printf("Opción: ");
+			try {
+				opción = Integer.parseInt(scanner.nextLine());
+			} catch (NumberFormatException e) {
+				System.out.println("Error: Debe ingresar un número válido.");
+			}
+		}
+	}
+}
