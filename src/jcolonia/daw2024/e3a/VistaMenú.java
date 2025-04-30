@@ -31,8 +31,8 @@ public class VistaMenú extends VistaGeneral {
 
 		textoOpciones = Arrays.copyOf(opciones, opciones.length);
 	}
-
 	/**
+	 * /**
 	 * Envía a la consola de texto –salida estándar– la lista numerada de opciones
 	 * disponibles. Incluye la opción «0» para salir o finalizar.
 	 */
@@ -48,11 +48,12 @@ public class VistaMenú extends VistaGeneral {
 	        System.out.println("5. Importación");
 	        System.out.println("6.Personalizar");
 	        System.out.println("7. Borrar todos los inventarios");
+	        System.out.println("8. Borrar un inventario");
 	        System.out.println("=====================");
 	    }
 
 	/**
-	 * Solicita al usuario que introduzca un número entero. 
+	 * Solicita al usuario que introduzca un número entero. El número debe
 	 * @return el entero introducido por el usuario
 	 * 
 	 */

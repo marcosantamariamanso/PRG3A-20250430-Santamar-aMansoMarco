@@ -49,7 +49,7 @@ public class ControladorInventarioAula {
 		do {
 			menú.mostrarTítuloPrincipal();
 			menú.mostrarMenú();
-			opción = menú.pedirOpción();
+			opción = menú.pedirOpcion();
 			n++;
 
 			switch (opción) {
@@ -67,6 +67,12 @@ public class ControladorInventarioAula {
 				break;
 			case 5: // Importación
 				importación(NOMBRE_ARCHIVO);
+				break;
+			case 6: // Personalización
+				stub(opción, n);
+				break;
+			case 7: // Borrar todos los inventarios
+				stub(opción, n);
 				break;
 			case 0:
 				finalizar(); // Finalizar programa

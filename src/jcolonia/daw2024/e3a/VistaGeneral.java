@@ -23,7 +23,7 @@ public class VistaGeneral {
 	private static Scanner scEntrada;
 
 	/** Nombre o título identificativo de la vista. */
-	private String nombre;
+	 String nombre;
 
 	/**
 	 * Almacena el nombre o título.
@@ -145,6 +145,7 @@ public class VistaGeneral {
 	 * de línea final.
 	 * 
 	 * @param texto el texto deseado
+
 	 */
 	public static void mostrarTexto(String texto) {
 		out.println(" " + texto);
@@ -164,7 +165,7 @@ public class VistaGeneral {
 	 * 
 	 * @param textoError el texto deseado
 	 */
-	public static void mostrarError(String textoError) {
+	public void mostrarError(String textoError) {
 		out.printf("%s *** ERROR: %s ***%s%n%n", ANSI_ROJO, textoError, ANSI_NORMAL);
 	}
 

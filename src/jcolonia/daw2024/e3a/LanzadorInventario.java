@@ -1,23 +1,20 @@
 package jcolonia.daw2024.e3a;
 
 /**
- * Lanzador de la aplicación de gestión de equipos informáticos en un aula.
- * 
+ * Main que ejecuta la aplicación de gestión de inventario de aula.
+ * Utilizara el bucle que se encuentra en la clase ControladorInventarioAula.
+ * No he conseguido hacer el main.
  * @see ControladorInventarioAula
  * 
- * @version 6.90 (2025426000)
+ * @version 6.90
  * @author <a href="mailto:dmartin.jcolonia@gmail.com">David H. Martín</a>
  */
-public class LanzadorInventario {
+public class LanzadorInventario extends ControladorInventarioAula {
 	/**
-	 * Inicia el programa creando una instancia de la clase y activando el bucle
-	 * principal de opciones.
+	 * Método principal de la aplicación. Crea el controlador y lo ejecuta.
 	 * 
-	 * @param argumentos opciones de ejcución -no se usan-
-	 * 
+	 * @param args argumentos de línea de comandos (no se usan)
 	 */
-	public static void main(String[] argumentos) {
-		ControladorInventarioAula control = new ControladorInventarioAula();
-		control.buclePrincipal();
+	public static void main(String[] args) {
 	}
-}
+	}
