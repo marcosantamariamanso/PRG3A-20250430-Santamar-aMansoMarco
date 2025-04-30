@@ -1,6 +1,7 @@
 package jcolonia.daw2024.e3a;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Vista: Utilidades prototipo de gestión de menú.
@@ -11,6 +12,10 @@ import java.util.Arrays;
  * @author <a href="mailto:dmartin.jcolonia@gmail.com">David H. Martín</a>
  */
 public class VistaMenú extends VistaGeneral {
+	/**
+     * Scanner para la lectura de la entrada del usuario.
+     */
+    private Scanner scanner;
 	/** Formato común tipo «printf» de las opciones de menú. */
 	private static final String FORMATO_OPCIONES_MENÚ = "  %d) %s%n";
 
@@ -35,8 +40,16 @@ public class VistaMenú extends VistaGeneral {
 	 * disponibles. Incluye la opción «0» para salir o finalizar.
 	 */
 	public void mostrarMenú() {
-		mostrarAviso("PENDIENTE: programador ocupado…");
-	}
+	        System.out.println("\n=====================");
+	        System.out.println("    Menú Principal   ");
+	        System.out.println("=====================");
+	        System.out.println("0. Salir");
+	        System.out.println("1. Alta de ordenador");
+	        System.out.println("2. Listar ordenadores");
+	        System.out.println("3. Guardar y salir");
+	        System.out.println("=====================");
+	    }
+
 
 	/**
 	 * Solicita al usuario elegir una opción de menú. En caso de no elegir una
@@ -45,7 +58,19 @@ public class VistaMenú extends VistaGeneral {
 	 * @return el número de la opción elegida [1..n]
 	 */
 	public int pedirOpción() {
-		mostrarAviso("PENDIENTE: programador ocupado…");
-		return 0;
+		int opcion = -1;
+        while (opcion < 0 || opcion > 3) {
+            System.out.print("Seleccione una opción: ");
+            try {
+				opcion = Integer.parseInt(scanner.nextLine());  // Leemos la opción como un número
+                if (opcion < 0 || opcion > 3) {
+                    System.out.println("Opción no válida. Por favor, intente nuevamente.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Debe ingresar un número válido.");
+            }
+        }
+        return opcion;
+    }
+		
 	}
-}
